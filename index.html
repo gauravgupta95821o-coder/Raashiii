@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Rashuu ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg,#ffb6c9,#ff758f,#d6336c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 25px 0;
+}
+
+#hearts span {
+  position: fixed;
+  bottom: -40px;
+  animation: float 9s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  20% { opacity: .8; }
+  100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.card {
+  width: 90%;
+  max-width: 420px;
+  padding: 35px 25px;
+  text-align: center;
+  background: rgba(255,255,255,.88);
+  border: 2px solid rgba(255,255,255,.8);
+  border-radius: 30px;
+  box-shadow: 0 15px 50px rgba(120,0,40,.25);
+  position: relative;
+  z-index: 2;
+  animation: enter 1.2s ease;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: scale(.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.heart {
+  font-size: 60px;
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+h1 {
+  color: #d6336c;
+  font-size: 29px;
+  margin: 18px 0;
+}
+
+h2 {
+  color: #c2255c;
+  margin: 15px 0;
+}
+
+p {
+  color: #81334e;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+button {
+  background: linear-gradient(135deg,#ff477e,#c9184a);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #efa0b8;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+#message {
+  display: none;
+  animation: enter 1.3s ease;
+}
+
+.divider {
+  color: #e64980;
+  margin: 22px 0;
+  letter-spacing: 5px;
+}
+
+.special {
+  background: #fff0f5;
+  padding: 18px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 1px solid #ffc2d1;
+}
+
+.signature {
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #d6336c;
+}
+
+.small {
+  font-size: 13px;
+  margin-top: 12px;
+  color: #a04b6b;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="card">
+
+  <div id="welcome">
+    <div class="heart">❤️</div>
+    <h1>For My Beautiful<br>RASHUU</h1>
+
+    <p>
+      Aapke liye ek chhoti si pyaari surprise hai... 🥹
+      <br><br>
+      Bas ek baar open kijiye ga. 💗
+    </p>
+
+    <button onclick="openLove()">
+      Open Your Surprise 💌
+    </button>
+
+    <div class="small">Made with lots of love ❤️</div>
+  </div>
+
+  <div id="message">
+
+    <div class="heart">💖</div>
+
+    <h1>Good Morning<br>My RASHUU 🌸</h1>
+
+    <p>
+      Meri pyaari si Rashuu,<br>
+      Aapki subah bahut khoobsurat ho,
+      aapke chehre par hamesha muskaan rahe
+      aur aaj ka har pal aapke liye special ho.
+    </p>
+
+    <div class="divider">♥ ♥ ♥</div>
+
+    <div class="special">
+      <h2>Ek Baat Kahoon? 🥹</h2>
+
+      <p>
+        Aap meri zindagi ka woh khoobsurat ehsaas hain,
+        jise main har din aur bhi zyada mehsoos karna chahta hoon.
+        <br><br>
+        Aapki ek muskaan mere poore din ko achha bana sakti hai.
+        Aur aapka saath mere liye duniya ki sabse pyaari cheez hai. ❤️
+      </p>
+    </div>
+
+    <div class="divider">♥ ♥ ♥</div>
+
+    <h2>Just For You, RASHUU 💗</h2>
+
+    <p>
+      Aap hamesha aise hi muskurati rahiye,
+      kyunki aapki khushi mere liye bahut maayne rakhti hai.
+      <br><br>
+      Kabhi khud ko akela mat samajhiyega,
+      aapki har chhoti-badi baat mere liye important hai.
+      <br><br>
+      Apna dhyan rakhiye ga,
+      time se khana khaiyega
+      aur apni cute si smile kabhi mat khona. 🫶
+    </p>
+
+    <div class="divider">♥ ♥ ♥</div>
+
+    <div class="signature">
+      I LOVE YOU RASHUU ❤️
+    </div>
+
+    <p style="margin-top:12px">
+      Have a beautiful day, meri jaan! 🌷
+    </p>
+
+    <div class="small">
+      A little morning happiness, made only for you.
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function openLove() {
+  document.getElementById("welcome").style.display = "none";
+  document.getElementById("message").style.display = "block";
+
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+const container = document.getElementById("hearts");
+
+for(let i = 0; i < 30; i++) {
+  const item = document.createElement("span");
+  item.innerHTML = ["❤️","💗","💕","💖","🌹","🌸"][i % 6];
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (15 + Math.random()*22) + "px";
+  item.style.animationDelay = Math.random()*10 + "s";
+  item.style.animationDuration = (7 + Math.random()*7) + "s";
+  container.appendChild(item);
+}
+</script>
+
+</body>
+</html>
